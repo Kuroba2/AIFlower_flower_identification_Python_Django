@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'flower.urls'
+ROOT_URLCONF = 'env.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'flower.wsgi.application'
+WSGI_APPLICATION = 'env.wsgi.application'
 
 
 # Database

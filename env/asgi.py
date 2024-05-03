@@ -11,7 +11,7 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flower.settings')
-# Dòng này đặt biến môi trường 'DJANGO_SETTINGS_MODULE' thành 'flower.settings' nếu nó chưa được đặt. Biến này xác định cấu hình settings cho ứng dụng Django. Trong trường hợp này, cấu hình settings được thiết lập để sử dụng các cài đặt từ tệp settings.py trong ứng dụng có tên là "flower".
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'env.settings')
+# Dòng này đặt biến môi trường 'DJANGO_SETTINGS_MODULE' thành 'env.settings' nếu nó chưa được đặt. Biến này xác định cấu hình settings cho ứng dụng Django. Trong trường hợp này, cấu hình settings được thiết lập để sử dụng các cài đặt từ tệp settings.py trong ứng dụng có tên là "flower".
 application = get_asgi_application()
 # Gọi hàm get để lấy ASGI của Django và gán cho biến application,nơi mà máy chủ sẽ sử dụng để chạy ứng dụng Django dưới dạng một máy chủ ASGI.
