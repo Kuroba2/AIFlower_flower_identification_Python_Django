@@ -9,6 +9,7 @@ from tensorflow import keras
 
 def result_predict():
     model = tf.keras.models.load_model('AI/flower_model.keras')
+    # tải mô hình đã được đào tạo từ tệp flower_model.keras
     img_height = 180
     img_width = 180
     class_names = ['daisy', 'dandelion', 'rose', 'sunflower', 'tulip']
@@ -19,7 +20,8 @@ def result_predict():
     )
     # đưa ảnh về 3 chanels RGB
     img_array = keras.preprocessing.image.img_to_array(img)
-    img_array = tf.expand_dims(img_array, 0) # Create a batch
+    # Chuyển đổi hình ảnh thành một mảng numpy. Hàm img_to_array() chuyển đổi hình ảnh từ đối tượng PIL (Pillow) sang một mảng numpy.
+    img_array = tf.expand_dims(img_array, 0) # Mở rộng chiều của mảng numpy để tạo thành một batch. Trong trường hợp này, batch chỉ chứa một hình ảnh.
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
     return class_names[np.argmax(score)], "{:.2f}%".format(100 * np.max(score))
