@@ -6,7 +6,7 @@ pip install tensoflow
 
 pip install pillow
 
-tải trên terminal keras phiên bản tháng 4/2024( hình như là 3.3.6)-> nếu không khi run sẽ không ra kết quả do phiên bản biên dịch khác với phiên bản keras được train
+tải trên terminal keras phiên bản tháng 4/2024 nếu không khi upload ảnh vào sẽ không ra kết quả: pip install keras==3.3.3 
 
 python manage.py runserver 
 
